@@ -2,7 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import IndexDropdown from "../dropdowns/IndexDropdown";
 
-export default function IndexNavbar(props : any) {
+export default function IndexNavbar() {
   
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
