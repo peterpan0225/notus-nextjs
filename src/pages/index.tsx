@@ -16,7 +16,7 @@ export default function Home() {
       </Head>     
 
       <IndexNavbar />
-      <section className="header relative pt-16 items-center flex h-screen max-h-860-px mx-40">
+      <section className="header relative pt-16 items-center flex h-screen mx-4">
         <div className="container mx-auto items-center flex flex-wrap">
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
@@ -84,14 +84,15 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32">
-              <div className="flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-slate-700">
-                <div className="relative p-8 mb-4">
-                  <Image                  
-                    // src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+              <div className="flex flex-col w-full mb-6 shadow-lg rounded-lg bg-slate-700">
+                <div className="relative">
+                  <Image                                      
                     className="align-middle rounded-t-lg object-cover"    
-                    src="/img/documentation.png"
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+                    //src="/img/documentation.png"
                     alt="..."
-                    fill
+                    width={1000}
+                    height={0}
                   />
                 </div>
                 <div className="relative p-8 mb-4">

@@ -1,16 +1,17 @@
 import React  from "react";
 import Link from "next/link";
-import { createPopper } from "@popperjs/core";
+import { createPopper, preventOverflow, flip } from "@popperjs/core";
 import IndexItem from "./IndexItem";
 
-export default function IndexDropdown() {
+const IndexDropdown = () => {
 
   const [dropdownPoperShow, setDropdownPoperShow] = React.useState(false);
   const btnDropdownRef = React.createRef<HTMLElement>();
-  const popperDropdownRef = React.createRef<HTMLElement>();
+  const popperDropdownRef = React.createRef<HTMLDivElement>();
   const openDropdownPopper = () => {
-    createPopper(btnDropdownRef.current as HTMLElement, popperDropdownRef.current as HTMLElement, {
+    createPopper(btnDropdownRef.current as HTMLElement, popperDropdownRef.current as HTMLDivElement, {
         placement: "bottom-start",
+        modifiers: [preventOverflow, flip],
     });
     setDropdownPoperShow(true);
   }
@@ -53,3 +54,5 @@ export default function IndexDropdown() {
     </>
   );
 }
+
+export default IndexDropdown;
