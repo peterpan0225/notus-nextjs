@@ -9,10 +9,10 @@ const IndexDropdown = () => {
   const btnDropdownRef = React.createRef<HTMLElement>();
   const popperDropdownRef = React.createRef<HTMLDivElement>();
   const openDropdownPopper = () => {
-    createPopper(btnDropdownRef.current as HTMLElement, popperDropdownRef.current as HTMLDivElement, {
-        placement: "bottom-start",
-        modifiers: [preventOverflow, flip],
-    });
+    // createPopper(btnDropdownRef.current as HTMLElement, popperDropdownRef.current as HTMLDivElement, {
+    //     placement: "bottom-start",
+    //     modifiers: [preventOverflow, flip],
+    // });
     setDropdownPoperShow(true);
   }
   const closeDropdownPopper = () => {
@@ -24,7 +24,7 @@ const IndexDropdown = () => {
       <a
         className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
         href="#pablo"
-        ref={btnDropdownRef as React.RefObject<HTMLAnchorElement>} 
+        // ref={btnDropdownRef as React.RefObject<HTMLAnchorElement>} 
         onClick={(e) => {
           e.preventDefault();
           dropdownPoperShow ? closeDropdownPopper() : openDropdownPopper();
@@ -33,8 +33,8 @@ const IndexDropdown = () => {
         Demo pages
       </a>
       <div
-        ref={popperDropdownRef as React.RefObject<HTMLDivElement>} 
-        className={ (dropdownPoperShow ? "block " : "hidden ") + "bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-[12rem]"}>
+        // ref={popperDropdownRef as React.RefObject<HTMLDivElement>} 
+        className={ (dropdownPoperShow ? "block " : "hidden ") + "absolute bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-[12rem] top-[160px] md:top-[60px]"}>
         <span className="text-sm pt-2 pb-0 px-4 font-bold w-full whitespace-nowrap text-slate-500">Admin Layout</span>
         <IndexItem url="/admin/dashboard" title="Dashboard" />
         <IndexItem url="/admin/tables" title="Tables" />

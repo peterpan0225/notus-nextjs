@@ -83,16 +83,15 @@ export default function Home() {
         </div>
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center">
-            <div className="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-32">
+            <div className="w-10/12 md:w-6/12 lg:w-4/12 px-1 md:px-4 mr-auto ml-auto -mt-32">
               <div className="flex flex-col w-full mb-6 shadow-lg rounded-lg bg-slate-700">
-                <div className="relative">
+                <div className="relative w-full pt-[60%]">
                   <Image                                      
-                    className="align-middle rounded-t-lg object-cover"    
+                    className="align-middle rounded-t-lg object-cover object-top"    
                     src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
                     //src="/img/documentation.png"
                     alt="..."
-                    width={1000}
-                    height={0}
+                    fill
                   />
                 </div>
                 <div className="relative p-8 mb-4">
