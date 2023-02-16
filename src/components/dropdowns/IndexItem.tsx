@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-type Props = {
+type LinkProps = {
   url?: string
   title?: string
 }
 
-export default function IndexItem({url = "", title}: Props) {
+export default function IndexItem({url = "", title}: LinkProps) {
   return (
     <>
       <Link href={url} legacyBehavior>
