@@ -23,14 +23,14 @@ export default function Login() {
                     className="bg-white active:bg-slate-50 text-slate-700 px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
                     type="button"
                   >
-                    <Image alt="..." className="w-5 mr-1" src="/img/github.svg" />
+                    <Image alt="..." className="w-5 mr-1" src="/img/github.svg"  width={20} height={20} />
                     Github
                   </button>
                   <button
                     className="bg-white active:bg-slate-50 text-slate-700 px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
                     type="button"
                   >
-                    <Image alt="..." className="w-5 mr-1" src="/img/google.svg" />
+                    <Image alt="..." className="w-5 mr-1" src="/img/google.svg"  width={20} height={20} />
                     Google
                   </button>
                 </div>
