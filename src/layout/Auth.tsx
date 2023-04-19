@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC, memo } from "react";
 import { ReactElement } from "react";
 
 // components
@@ -6,18 +6,17 @@ import { ReactElement } from "react";
 import IndexNavbar from "@/components/navbars/IndexNavbar";
 import FooterSmall from "@/components/footer/FooterSmall";
 
-interface ElementProps {
+interface AuthProps {
   children? : ReactElement
 }
 
-export default function Auth({ children } : ElementProps) {
+export const Auth: FC<AuthProps> = memo(({children} : AuthProps) => {
   return (
     <>
       <IndexNavbar />
       <main>
         <section className="relative w-full h-full py-40 min-h-screen">
-          <div
-            className="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full"
+          <div className="absolute top-0 w-full h-full bg-blueGray-800 bg-no-repeat bg-full"
             style={{
               backgroundImage: "url('/img/register_bg_2.png')",
             }}
@@ -27,5 +26,9 @@ export default function Auth({ children } : ElementProps) {
         </section>
       </main>
     </>
-  );
-}
+  )
+})
+
+Auth.displayName = "Auth"
+
+export default Auth

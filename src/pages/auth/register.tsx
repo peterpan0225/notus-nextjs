@@ -1,8 +1,10 @@
-import React from "react";
+import React, { memo, ReactElement } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Auth from "@/layout/Auth";
 
-export default function Register() {
+export const RegisterPage = () => {
+
   return (
     <>
       <div className="container mx-auto px-4 h-full">
@@ -117,3 +119,13 @@ export default function Register() {
     </>
   )
 }
+
+RegisterPage.displayName = "Register"
+
+RegisterPage.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Auth>{page}</Auth>
+  )
+}
+
+export default RegisterPage

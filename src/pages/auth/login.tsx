@@ -1,11 +1,12 @@
-import React from "react";
+import React, { memo, ReactElement } from "react";
 import Link from "next/link";
 import Image from "next/image";
 // layout for page
 
 import Auth from "@/layout/Auth";
 
-export default function Login() {
+export const LoginPage = memo(() => {
+
   return (
     <>
       <div className="container mx-auto px-4 h-full">
@@ -114,7 +115,17 @@ export default function Login() {
         </div>
       </div>
     </>
-  );
+  )
+})
+
+LoginPage.displayName = "Login"
+
+LoginPage.getLayout = (page: ReactElement) => {
+  return (
+    <>
+      <Auth>{page}</Auth>
+    </>
+  )
 }
 
-Login.layout = Auth;
+export default LoginPage
